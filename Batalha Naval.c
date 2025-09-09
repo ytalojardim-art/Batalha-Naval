@@ -1,16 +1,35 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 
 int main() {
-    int linha[10]= {1,2,3,4,5,6,7,8,9,10}; // vetor para numerar as linhas do tabuleiro
-    int coluna[10]= {1,2,3,4,5,6,7,8,9,10};// vetor para numerar as colunas do tabulerio
-    int tabuleiro [10][10]= {0}; // matriz do tabuleiro
-    int navio_vertical [3]= {3,3,3};//vetor para declarar o tamanho do navio vertical
-    int navio_horizontal [3]= {3,3,3};//vetor para declarar o tamanho do navio horizontal
+    int linha[10]= {1,2,3,4,5,6,7,8,9,10};
+    int coluna[10]= {1,2,3,4,5,6,7,8,9,10};
+    int tabuleiro [10][10]= {0};
+    int navio_vertical [3]= {3,3,3};
+    int navio_horizontal [3]= {3,3,3};
+    int navio_diagonal [3]= {3,3,3};
+    int navio_diagonal2 [3]= {3,3,3};
+
+    int posicao_diagonal_linha= 0; // variaveis para alocar o primeiro navio na posicao diagonal
+    int posicao_diagonal_coluna =0;
 
 
 
-    // primeiro navio
+    if(posicao_diagonal_coluna+3 <=10 && posicao_diagonal_linha+3 <=10); // codigo de decisao para diagonal de cima para baixo canto esquerdo
+        for(int d=0;d<3;d++){
+            tabuleiro[posicao_diagonal_linha+d][posicao_diagonal_coluna+d]=navio_diagonal[d];
+        }
+
+    int posicao_diagonal_linha2=9 ; // variaveis para alocar o primeiro navio na posicao diagonal 2 invertida na posiçao de baixo para cima
+    int posicao_diagonal_coluna2 =0;
+
+    if(posicao_diagonal_coluna2+3 <=10 && posicao_diagonal_linha2-3 <=10); 
+    for(int d2=0;d2<3;d2++){
+            tabuleiro[posicao_diagonal_linha2-d2][posicao_diagonal_coluna2+d2]=navio_diagonal2[d2]; // codigo para decrementar a linha e fazer a diagonal invertida
+        }
+
+
+
     int posicao_vertical_linha= 1; // variaveis para alocar o primeiro navio na posicao vertical
     int posicao_vertical_coluna =4;
 
